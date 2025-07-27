@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "../../utils.h"
+
 typedef struct {
     int x;
     int y;
@@ -46,6 +48,6 @@ int solve(int n) {
 }
 
 int main(void) {
-    printf("RESULT = %d\n", solve(4000000));
+    result_of(solve(4000000), "%d");
     return 0;
 }

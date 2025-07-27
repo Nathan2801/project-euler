@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include "../../utils.h"
+
 int sum_of_multiples_of_3_and_5(int start, int end, int step) {
     int result = 0;
     for (int s = start; s < end; s += step) {
@@ -11,11 +13,7 @@ int sum_of_multiples_of_3_and_5(int start, int end, int step) {
 }
 
 int main(void) {
-    int test = sum_of_multiples_of_3_and_5(0, 10, 1);
-    printf("  TEST = %d\n", test);
-
-    int result = sum_of_multiples_of_3_and_5(0, 1000, 1);
-    printf("RESULT = %d\n", result);
-
+	result_of(sum_of_multiples_of_3_and_5(0,   10, 1), "%d");
+	result_of(sum_of_multiples_of_3_and_5(0, 1000, 1), "%d");
     return 0;
 }
